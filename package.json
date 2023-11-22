@@ -2,14 +2,17 @@
   "name": "remx_contactx",
   "private": true,
   "sideEffects": false,
-  "type": "module",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc"
   },
+  "prisma": {
+    "seed": "node --loader ts-node/esm ./prisma/seed.ts"
+  },
   "dependencies": {
+    "@prisma/client": "^5.6.0",
     "@remix-run/css-bundle": "^2.3.0",
     "@remix-run/node": "^2.3.0",
     "@remix-run/react": "^2.3.0",
@@ -21,9 +24,14 @@
   "devDependencies": {
     "@remix-run/dev": "^2.3.0",
     "@remix-run/eslint-config": "^2.3.0",
+    "@types/node": "^20.9.3",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.38.0",
+    "prisma": "^5.6.0",
+    "tailwindcss": "^3.3.5",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6"
   },
   "engines": {
