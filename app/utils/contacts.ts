@@ -15,7 +15,9 @@ export async function getContact(id: string) {
   });
 }
 
-export async function createContact(contactDetails: contacts) {
+export async function createContact(
+  contactDetails: Omit<contacts, "id" | "favorite" | "createdAt">
+) {
   return await prisma.contacts.create({
     data: contactDetails,
   });

@@ -44,9 +44,12 @@ export default function App() {
                 className="p-2 ring-1 ring-zinc-200 shadow-sm border-zinc-400 rounded-md"
                 placeholder="Search"
               />
-              <button className="p-2 bg-white ring-1 ring-zinc-200 text-blue-400 rounded-md">
+              <Link
+                to="add"
+                className="p-2 bg-white ring-1 ring-zinc-200 text-blue-400 rounded-md"
+              >
                 New
-              </button>
+              </Link>
             </form>
           </div>
           <div className="p-4">

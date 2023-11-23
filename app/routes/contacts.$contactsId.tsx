@@ -19,13 +19,16 @@ export default function ContactsId() {
         </div>
 
         <div className="flex flex-col justify-evenly space-y-2 px-3">
-          <h1 className="text-3xl text-zinc-950 font-semibold">
-            {contactDetail?.firstName} {contactDetail?.lastName}
-          </h1>
+          <div className="flex justify-between">
+            <h1 className="text-3xl text-zinc-950 font-semibold">
+              {contactDetail?.firstName} {contactDetail?.lastName}
+            </h1>
+            <button className=""></button>
+          </div>
           <p className="text-blue-400">
             {contactDetail ? contactDetail?.twitter : null}
           </p>
-          <p className="text-gray-300 font-normal">
+          <p className="text-gray-500 font-normal">
             {contactDetail ? contactDetail?.notes : null}
           </p>
           <div className="flex space-x-3 ">

@@ -49,6 +49,13 @@ async function seed() {
   });
 }
 
-seed().then(async () => {
-  await prisma.$disconnect();
-});
+seed()
+  .then(async () => {
+    await prisma.$disconnect();
+  })
+  .catch((e) => {
+    console.log(e);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

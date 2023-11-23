@@ -2,6 +2,7 @@
   "name": "remx_contactx",
   "private": true,
   "sideEffects": false,
+  "type": "module",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
@@ -12,6 +13,7 @@
     "seed": "node --loader ts-node/esm ./prisma/seed.ts"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@prisma/client": "^5.6.0",
     "@remix-run/css-bundle": "^2.3.0",
     "@remix-run/node": "^2.3.0",
@@ -19,7 +21,8 @@
     "@remix-run/serve": "^2.3.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.3.0",
